@@ -4,7 +4,10 @@
 
 <h2>Students</h2>
 
-<table class="table table-ordered">
+<table
+id="student_table"
+class="table table-ordered table-striped table-hover"
+>
     <thead>
         <tr>
             <th>ID</th>
@@ -28,3 +31,18 @@
 </table>
 
 {% endblock %}
+
+{% block scripts %}
+
+<script>
+
+    $(document).ready(function(){
+
+        $('#students_table').Datatable();
+
+    });
+
+    </script>
+
+    {% endblock %}
+    
